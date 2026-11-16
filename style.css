@@ -1,0 +1,57 @@
+    @font-face {
+    font-family: 'babe_chubby';
+    src: url(fonts/babe_chubby.otf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'Gabella' ;
+    src: url(fonts/Gabella.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'Iam-Hueca';
+    src: url(fonts/Iam-Hueca.otf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+h1{
+    font-family: "Iam-Hueca";
+    font-size: 80px;
+}
+
+
+body {
+    background: linear-gradient(to bottom, #861657, #BF5F7D);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+section {
+    background-color: #373E40;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid white 1px;
+    width: 40%;
+
+}
+
+#img_accueil{
+    display: block;
+    width: 70%;
+    margin:0 auto;
+}
+
+
