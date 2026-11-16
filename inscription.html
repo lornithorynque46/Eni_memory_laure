@@ -6,6 +6,48 @@
     <title>S'inscrire</title>
 </head>
 <body>
-    <h1></h1>
+     <header>
+        
+        <h1>Inscription</h1>
+
+        <nav class="navbar"></nav>
+        <div class="lien-nav">
+            <a href="inscription.html">S'inscrire</a>
+            <a href="connexion.html">Se connecter</a>
+            <a href="jeu.html">Jouer</a>
+            <a href="profil.html">Accéder à son profil</a>
+            </div>
+        </nav>
+    </header> 
+    
+    <main>
+        <section class="sectionForm">
+                <fieldset>
+                    <legend>Inscrivez-vous</legend>
+                
+                    <form action="" method="POST">
+                        <div>
+                            <label for="nom">Nom d'utilisateur * : </label>
+                            <input type="text" name="nom" id="nom" placeholder="3 caractères minimum" required autofocus title="Renseignez votre nom" pattern="[a-zA-Z]+">
+                        </div>
+                        <div>
+                            <label for="email">Entrez votre adresse mail : </label>
+                            <input type="email" name="email" id="email" placeholder="ex. :jeandupont@monmail.fr" required title="Renseignez votre adresse mail" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$">
+                        </div>
+                        <div>
+                            <label for="mdp">Votre mot de passe : </label>
+                            <input type="password" name="mdp" id="mdp" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 symbole et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                        </div>
+                        <div>
+                            <label for="mdpVerif">Confirmez le mot de passe : </label>
+                            <input type="password" name="mdpVerif" id="mdpVerif" required title="Confirmez le mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                        </div>
+                        <div class="btnForm">
+                            <input type="submit" value="Valider" class="btn">
+                            <input type="reset" value="Annuler saisie" class="btn"> 
+                            <a href="#" class="btn">Annuler</a>
+                        </div>
+                        
+    </main>
 </body>
 </html>
