@@ -1,16 +1,6 @@
     @font-face {
-    font-family: 'babe_chubby';
-    src: url(fonts/babe_chubby.otf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-    font-family: 'Gabella' ;
-    src: url(fonts/Gabella.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
     font-family: 'Iam-Hueca';
-    src: url(fonts/Iam-Hueca.otf) format('truetype');
+    src: url(fonts/Iam-Hueca.otf) format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -25,17 +15,18 @@ h1{
     font-size: 80px;
     color:white;
     text-align: center;
+    margin-top: 20px;
 }
 
 body {
     /*background: linear-gradient(to bottom, #861657, #BF5F7D);*/
     background-image: url("ressources/imagesdefond/fond-bleu.jpg");
-  background-size:cover;
+    background-size:cover;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content:flex-start;
     min-height: 100vh;
 }
 
@@ -129,8 +120,7 @@ section div {
     margin: 15px;
 }
 
-.btn {
-    background-color: silver;
+.cancel, .validate {
     width: 180px;
     color: white;
     font-size: 1.1em;
@@ -166,27 +156,27 @@ input:hover {
     border: 1px solid rgb(158, 116, 158);
 }
 
-.btn:hover {
-    background-color: rgb(165, 164, 164);
+.cancel:hover, .validate:hover {
     cursor: pointer;
 }
 
-.btn:first-child {
+.cancel {
     background-color: rgb(177, 57, 36);
+    border: 1px solid silver;
 }
 
-.btn:last-child {
+.validate {
     background-color: green;
     border: 1px solid silver;
 }
 
 
-.btn:first-child:hover {
+.cancel:hover {
     background-color: rgb(155, 50, 32);
-    border: 1px solid silver;
+    
 }
 
-.btn:last-child:hover {
+.validate:hover {
     background-color: rgb(1, 95, 1);   
 }
 
@@ -205,3 +195,34 @@ input:hover {
     text-align: right;
 
 }
+
+.jeu{
+    font-size: 16px;
+    text-align: center;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+    margin:30px 0 30px 0;
+}
+
+td {
+    height: 15vh;
+    width: 15vh;
+    background-color: white;
+    text-align: center;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+td:hover {
+    border: 1px black solid;
+}
+
+img {
+    padding: 20px;
+}
+
+

@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Se connecter</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+    <header>
+        
+        <h1>Connexion</h1>
+
+        <nav>
+        <div class="lien-nav">
+            <a href="accueil.html">Accueil</a>
+            <a href="inscription.html">S'inscrire</a>
+            <a href="connexion.html">Se connecter</a>
+            <a href="jeu.html">Jouer</a>
+            <a href="profil.html">Accéder à son profil</a>
+            </div>
+        </nav>
+    </header> 
+
+<main>
+<section class="sectionForm">
+<h2>Connectez-vous</h2>
+    <fieldset>
+        <form action="" method="POST">
+            <div>
+                <label for="emailFormConnect">Entrez votre adresse mail : </label>
+                <input type="email" name="email" id="emailFormConnect" placeholder="ex. :jeandupont@monmail.fr" required title="Renseignez votre adresse mail" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$">
+            </div>
+            <div>
+                <label for="mdpFormConnect">Votre mot de passe : </label>
+                <input type="password" name="mdp" id="mdpFormConnect" required title="Renseignez un mot de passe (min. 6 caractères dont au moins 1 minuscule, 1 symbole et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br/>
+                    <small id="small">Au moins 6 caractères dont une minuscule, un symbole et un chiffre.</small>
+            </div>
+            <div class="btnForm">
+                <button type="reset" class="cancel">Annuler</button>
+                <button type="submit" class="validate">Se connecter</button>
+                            
+            </div>
+            </form>
+    </fieldset>
+</section>
+</main>
 </body>
 </html>
