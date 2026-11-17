@@ -38,15 +38,16 @@
                         </div>
                         <div>
                             <label for="mdp">Votre mot de passe : </label>
-                            <input type="password" name="mdp" id="mdp" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 symbole et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            <input type="password" name="mdp" id="mdp" required title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 symbole et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br/>
+                                <small id="small">Au moins 8 caractères dont une minuscule, un symbole et un chiffre.</small>
                         </div>
                         <div>
                             <label for="mdpVerif">Confirmez le mot de passe : </label>
                             <input type="password" name="mdpVerif" id="mdpVerif" required title="Confirmez le mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                         </div>
                         <div class="btnForm">
-                            <button type="submit" class="btn">Valider</button>
                             <button type="reset" class="btn">Annuler</button>
+                            <button type="submit" class="btn">Valider</button>
                             
                         </div>
                         </form>

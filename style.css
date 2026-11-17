@@ -93,7 +93,7 @@ p{
 
 h2 {
     text-align: center;
-    padding-bottom: 2%;
+    padding-bottom: 20px;
     color: white;
     font-size: 2.5rem;
 }
@@ -198,4 +198,10 @@ input:hover {
         text-align: left;
         
     }
+}
+
+#small{
+    display: block;
+    text-align: right;
+
 }
