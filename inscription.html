@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S'inscrire</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
      <header>
@@ -12,6 +13,7 @@
 
         <nav class="navbar"></nav>
         <div class="lien-nav">
+            <a href="accueil.html">Accueil</a>
             <a href="inscription.html">S'inscrire</a>
             <a href="connexion.html">Se connecter</a>
             <a href="jeu.html">Jouer</a>
@@ -21,10 +23,10 @@
     </header> 
     
     <main>
+        
         <section class="sectionForm">
+            <h2>Inscrivez-vous</h2>
                 <fieldset>
-                    <legend>Inscrivez-vous</legend>
-                
                     <form action="" method="POST">
                         <div>
                             <label for="nom">Nom d'utilisateur * : </label>
@@ -43,10 +45,12 @@
                             <input type="password" name="mdpVerif" id="mdpVerif" required title="Confirmez le mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                         </div>
                         <div class="btnForm">
-                            <input type="submit" value="Valider" class="btn">
-                            <input type="reset" value="Annuler saisie" class="btn"> 
-                            <a href="#" class="btn">Annuler</a>
+                            <button type="submit" class="btn">Valider</button>
+                            <button type="reset" class="btn">Annuler</button>
+                            
                         </div>
+                        </form>
+                        </fieldset>
                         
     </main>
 </body>
