@@ -46,30 +46,45 @@ const cartes = $("td img");
 function game() {
   const numero = cartes.index(this);
 
+console.log(cartes.index(premiere), numero);
   if ($(this).attr("src") != "ressources/question.svg") return;
-  this.src = imagesShuffled[numero];
+  retourner(this,imagesShuffled[numero])
+  
   if (premiere === null) {
     premiere = this;
     return;
-  } else if ($(premiere).attr("src") === $(this).attr("src")) {
+  //} else if ($(premiere).attr("src") === $(this).attr("src")) {
+  } else if (imagesShuffled[cartes.index(premiere)] === imagesShuffled[numero]) {
     console.log("paire trouvée");
     pairesTrouvees++;
-    if(pairesTrouvees===6){
-      console.log("gagné")
+    if(pairesTrouvees===images.length){
+      $(".texteFlou").text("Bravo vous avez gagné!")
+      $(".texteFlou").addClass("visible");
     }
-    console.log(pairesTrouvees)
+  
   } else {
     let carte1 = premiere;
     let carte2 = this;
     setTimeout(() => {
-      ((carte1.src = "ressources/question.svg"),
-        (carte2.src = "ressources/question.svg"));
-    }, 1000);
-    console.log("images différentes");
+      retourner(carte1, "ressources/question.svg");
+      retourner(carte2, "ressources/question.svg");
+    }, 2000);
+    
   }
   premiere = null;
 }
 
 //lancement de la fonction jeu
-
 cartes.on("click", game);
+
+
+//fonction permettant de retourner les cartes
+function retourner(carte,nouveauSRC){
+$(carte).addClass("aplatie")
+setTimeout(()=>{
+  carte.src = nouveauSRC;
+ ($(carte).removeClass("aplatie"))
+},300);
+
+}
+

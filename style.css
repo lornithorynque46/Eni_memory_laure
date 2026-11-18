@@ -1,228 +1,250 @@
     @font-face {
-    font-family: 'Iam-Hueca';
-    src: url(fonts/Iam-Hueca.otf) format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+        font-family: 'Iam-Hueca';
+        src: url(fonts/Iam-Hueca.otf) format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
 
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin:0;
-}
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
 
-h1{
-    font-family: "Iam-Hueca";
-    font-size: 80px;
-    color:white;
-    text-align: center;
-    margin-top: 20px;
-}
+    h1 {
+        font-family: "Iam-Hueca";
+        font-size: 80px;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
 
-body {
-    /*background: linear-gradient(to bottom, #861657, #BF5F7D);*/
-    background-image: url("ressources/imagesdefond/fond-bleu.jpg");
-    background-size:cover;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:flex-start;
-    min-height: 100vh;
-}
+    body {
+        /*background: linear-gradient(to bottom, #861657, #BF5F7D);*/
+        background-image: url("ressources/imagesdefond/fond-bleu.jpg");
+        background-size: cover;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+    }
 
-main {
-    width: 90%;
-    max-width: 1000px;
-}
+    main {
+        width: 90%;
+        max-width: 1000px;
+    }
 
-section {
-    
-    background-color: #373E40;
-    padding: 20px;
-    border-radius: 10px;
-    border: solid white 1px;
-    width: 100%;
-    margin-bottom: 30px;
-}
+    section {
 
-#img_accueil{
-    display: block;
-    width: 60%;
-    max-width: 600px;
-    margin:0 auto;
-    padding: 20px;
-}
+        background-color: #373E40;
+        padding: 20px;
+        border-radius: 10px;
+        border: solid white 1px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
-.lien-nav{
-    margin:0;
-    padding:0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    gap: 20px;
-}
+    #img_accueil {
+        display: block;
+        width: 60%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-.lien-nav a{
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    padding: 10px 15px;
-    gap:20px;
-    background: linear-gradient(#0F2027, #203A43, #2C5364);
-    border-radius: 10px;
-    box-shadow: 3px 3px 15px rgb(0, 0, 0);
-}
+    .lien-nav {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 20px;
+    }
 
-.lien-nav a:hover {
-    background: linear-gradient(#000000, #434343);
-}
+    .lien-nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        padding: 10px 15px;
+        gap: 20px;
+        background: linear-gradient(#0F2027, #203A43, #2C5364);
+        border-radius: 10px;
+        box-shadow: 3px 3px 15px rgb(0, 0, 0);
+    }
 
-p{
-    padding: 20px;
-}
+    .lien-nav a:hover {
+        background: linear-gradient(#000000, #434343);
+    }
 
-h2 {
-    text-align: center;
-    padding-bottom: 20px;
-    color: white;
-    font-size: 2.5rem;
-}
+    p {
+        padding: 20px;
+    }
 
-fieldset {
-    border-radius: 7px;
-    border: 1px dotted white;
-    padding:20px;
-    margin: 20px;
-}
+    h2 {
+        text-align: center;
+        padding-bottom: 20px;
+        color: white;
+        font-size: 2.5rem;
+    }
 
-input {
-    height: 30px;
-    width: 400px;
-    border-radius: 7px;
-    border: 1px dotted white;
-    padding-left: 5px;
-}
+    fieldset {
+        border-radius: 7px;
+        border: 1px dotted white;
+        padding: 20px;
+        margin: 20px;
+    }
 
-label {
-    display: inline-block;
-    width: 200px;
-    color: white;
-    text-align: right;
-    margin-right: 5px;
-}
+    input {
+        height: 30px;
+        width: 400px;
+        border-radius: 7px;
+        border: 1px dotted white;
+        padding-left: 5px;
+    }
 
-.labelGauche{
-    text-align: left;
-}
-
-section div {
-    margin: 15px;
-}
-
-.cancel, .validate {
-    width: 180px;
-    color: white;
-    font-size: 1.1em;
-    border: 1px solid silver;
-    border-radius: 7px;
-    height: 50px;
-}
-
-.btnForm {
-    display: flex;
-    justify-content:center;
-    margin-top: 50px;
-    gap:20px;
-}
-
-.sectionForm {
-    padding: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-
-
-input:focus {
-    border: 1px solid rgb(110, 83, 110);
-    outline-style: none;
-}
-
-input:hover {
-    border: 1px solid rgb(158, 116, 158);
-}
-
-.cancel:hover, .validate:hover {
-    cursor: pointer;
-}
-
-.cancel {
-    background-color: rgb(177, 57, 36);
-    border: 1px solid silver;
-}
-
-.validate {
-    background-color: green;
-    border: 1px solid silver;
-}
-
-
-.cancel:hover {
-    background-color: rgb(155, 50, 32);
-    
-}
-
-.validate:hover {
-    background-color: rgb(1, 95, 1);   
-}
-
-@media screen and (max-width: 708px) {
     label {
         display: inline-block;
         width: 200px;
-        color: rgb(158, 116, 158);
-        text-align: left;
-        
+        color: white;
+        text-align: right;
+        margin-right: 5px;
     }
-}
 
-#small{
-    display: block;
-    text-align: right;
+    .labelGauche {
+        text-align: left;
+    }
 
-}
+    section div {
+        margin: 15px;
+    }
 
-.jeu{
-    font-size: 16px;
-    text-align: center;
-}
+    .cancel,
+    .validate {
+        width: 180px;
+        color: white;
+        font-size: 1.1em;
+        border: 1px solid silver;
+        border-radius: 7px;
+        height: 50px;
+    }
 
-table{
-    display: flex;
-    justify-content: center;
-    margin:30px 0 30px 0;
-}
+    .btnForm {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 20px;
+    }
 
-td {
-    height: 15vh;
-    width: 15vh;
-    background-color: white;
-    text-align: center;
-    border: 1px solid gray;
-    border-collapse: collapse;
-    cursor: pointer;
-}
-
-td:hover {
-    border: 1px black solid;
-}
-
-img {
-    padding: 20px;
-}
+    .sectionForm {
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
 
 
+    input:focus {
+        border: 1px solid rgb(110, 83, 110);
+        outline-style: none;
+    }
+
+    input:hover {
+        border: 1px solid rgb(158, 116, 158);
+    }
+
+    .cancel:hover,
+    .validate:hover {
+        cursor: pointer;
+    }
+
+    .cancel {
+        background-color: rgb(177, 57, 36);
+        border: 1px solid silver;
+    }
+
+    .validate {
+        background-color: green;
+        border: 1px solid silver;
+    }
+
+
+    .cancel:hover {
+        background-color: rgb(155, 50, 32);
+
+    }
+
+    .validate:hover {
+        background-color: rgb(1, 95, 1);
+    }
+
+    @media screen and (max-width: 708px) {
+        label {
+            display: inline-block;
+            width: 200px;
+            color: rgb(158, 116, 158);
+            text-align: left;
+
+        }
+    }
+
+    #small {
+        display: block;
+        text-align: right;
+
+    }
+
+    .jeu {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    table {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0 30px 0;
+    }
+
+    td {
+        height: 15vh;
+        width: 15vh;
+        background-color: white;
+        text-align: center;
+        border: 1px solid gray;
+        border-collapse: collapse;
+        cursor: pointer;
+    }
+
+    td:hover {
+        border: 1px black solid;
+    }
+
+    img {
+        padding: 20px;
+    }
+
+
+
+    .texteFlou {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 700;
+        opacity: 0;
+        filter: blur(10px);
+        transition: opacity 0.8s ease, filter 0.8s ease;
+    }
+
+    .texteFlou.visible {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    td img{
+        transition: transform 0.3s;
+    }
+
+    .aplatie { transform: scaleX(0); }
