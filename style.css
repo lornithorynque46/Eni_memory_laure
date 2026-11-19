@@ -235,7 +235,7 @@
         font-weight: 700;
         opacity: 0;
         filter: blur(10px);
-        transition: opacity 0.8s ease, filter 0.8s ease;
+        transition: opacity 1s ease, filter 1s ease;
     }
 
     .texteFlou.visible {
