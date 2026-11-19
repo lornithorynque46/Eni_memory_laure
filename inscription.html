@@ -32,7 +32,8 @@
                     <form action="" method="POST">
                         <div>
                             <label for="nom">Nom d'utilisateur  : </label>
-                            <input type="text" name="nom" id="nom" placeholder="3 caractères minimum" required autofocus title="Renseignez votre nom" pattern="[a-zA-Z]+">
+                            <input type="text" name="nom" id="nom" placeholder="3 caractères minimum" required autofocus title="Renseignez votre nom" pattern="[a-zA-Z]{3,}$">
+                            <small id="smallName"></small>
                         </div>
                         <div>
                             <label for="emailFormInsc">Entrez votre adresse mail : </label>

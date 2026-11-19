@@ -40,11 +40,10 @@ let pairesTrouvees = 0;
 let nbreCoup = 0;
 let premiere = null;
 
-
 //fonction principale du jeu
 const cartes = $("td img");
 function game() {
-  //On ne peut pas cliquer sur une 3ème carte
+  //Si le verrou est activé on ne pourra pas cliquer sur une carte supplémentaire
   if (occupe) return;
   const numero = cartes.index(this);
   //On ne peut pas cliquer sur une carte qui a déjà été retournée
@@ -58,11 +57,9 @@ function game() {
   }
   //On incrémente le nombre de coup chaque fois que deux cartes ont été retournées et on l'affiche
   nbreCoup++;
-  $("#nbreDeCoups").text(nbreCoup)
+  $("#nbreDeCoups").text(nbreCoup);
   //On compare deux cartes,si elles sont identiques les images restent en place et une paire est trouvée
-  if (
-    imagesShuffled[cartes.index(premiere)] === imagesShuffled[numero]
-  ) {
+  if (imagesShuffled[cartes.index(premiere)] === imagesShuffled[numero]) {
     pairesTrouvees++;
     //Si toutes les paires sont trouvées, la partie est gagnée
     if (pairesTrouvees === images.length) {
@@ -74,12 +71,13 @@ function game() {
     //On garde en mémoire les deux cartes retournées
     let carte1 = premiere;
     let carte2 = this;
-    //
+    //On active le verrou quand deux cartes différentes ont été retournées, pour ne pas pouvoir cliquer sur une 3ème carte en attendant qu'elles se retournent
     occupe = true;
-    //On laisse un délai d'une seconde avant que les cartes ne se retournent à nouveau 
+    //On laisse un délai d'une seconde avant que les cartes ne se retournent à nouveau
     setTimeout(() => {
       retourner(carte1, "ressources/question.svg");
       retourner(carte2, "ressources/question.svg");
+      //Quand les deux deux cartes sont à nouveau retournées (face point d'interrogation), on désactive le verrou
       occupe = false;
     }, 1000);
   }
@@ -102,25 +100,21 @@ function retourner(carte, nouveauSRC) {
 //Fonction de réinitialisation
 //on ajoute un écouteur sur la barre d'espace
 document.addEventListener("keydown", (event) => {
-//si l'événement correspond bien à la barre d'espace
+  //si l'événement correspond bien à la barre d'espace
   if (event.code === "Space") {
-    //On empêche son cmportement par défaut (défilement vers le bas)
+    //On empêche son comportement par défaut (défilement vers le bas)
     event.preventDefault();
     //On réinitialise tous les paramètres
     nbreCoup = 0;
-    $("#nbreDeCoups").text(nbreCoup)
+    $("#nbreDeCoups").text(nbreCoup);
     imagesShuffled = shuffleImages(allImages);
     premiere = null;
     pairesTrouvees = 0;
     cartes.each((index, carte) => {
       carte.src = "ressources/question.svg";
       $(carte).removeClass("aplatie");
-      
-
-    })
-
+    });
   }
-
 });
 
 
