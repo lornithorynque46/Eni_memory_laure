@@ -6,7 +6,7 @@
     <title>S'inscrire</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js" defer></script>
+    <script src="inscription.js" defer></script>
 </head>
 <body>
      <header>
@@ -32,17 +32,18 @@
                     <form action="" method="POST">
                         <div>
                             <label for="nom">Nom d'utilisateur  : </label>
-                            <input type="text" name="nom" id="nom" placeholder="3 caractères minimum" required autofocus title="Renseignez votre nom" pattern="[a-zA-Z]{3,}$">
+                            <input type="text" name="nom" id="nom" placeholder="3 caractères minimum" required autofocus title="Renseignez votre nom" pattern="[a-zA-Z]{3,}$"></br>
                             <small id="smallName"></small>
                         </div>
                         <div>
                             <label for="emailFormInsc">Entrez votre adresse mail : </label>
-                            <input type="email" name="email" id="emailFormInsc" placeholder="ex. :jeandupont@monmail.fr" required title="Renseignez votre adresse mail" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$">
+                            <input type="email" name="email" id="emailFormInsc" placeholder="ex. :jeandupont@monmail.fr" required title="Renseignez votre adresse mail"  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"></br>
+                            <small id="smallMail"></small>
                         </div>
                         <div>
                             <label for="mdpFormInsc">Votre mot de passe : </label>
                             <input type="password" name="mdp" id="mdpFormInsc" required title="Renseignez un mot de passe (min. 6 caractères dont au moins 1 minuscule, 1 symbole et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"><br/>
-                                <small id="small">Au moins 6 caractères dont une minuscule, un symbole et un chiffre.</small>
+                                <small id="smallMdp">Au moins 6 caractères dont une minuscule, un symbole et un chiffre.</small>
                         </div>
                         <div>
                             <label for="mdpVerif">Confirmez le mot de passe : </label>
