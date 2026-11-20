@@ -63,7 +63,9 @@
  }
 
  @media (max-width: 767px) {
-     .cancel, .validate {
+
+     .cancel,
+     .validate {
          font-size: 14px;
          width: 100px;
          height: 30px;
@@ -95,7 +97,7 @@
  }
 
  input:hover {
-     border: 2px solid #3AAED8;
+     border: 1px solid #3AAED8;
  }
 
  .cancel:hover,
@@ -121,6 +123,13 @@
 
  .validate:hover {
      background-color: rgb(1, 95, 1);
+ }
+
+ #smallName,
+ #smallMail {
+     display: block;
+     text-align: end;
+     color: red;
  }
 
 

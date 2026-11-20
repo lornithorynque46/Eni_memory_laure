@@ -22,11 +22,11 @@ input {
     padding-left: 5px;
 }
 
- @media (max-width: 767px) {
-     input {
-         width: 250px;
-     }
- }
+@media (max-width: 767px) {
+    input {
+        width: 250px;
+    }
+}
 
 label {
     display: inline-block;
@@ -37,11 +37,11 @@ label {
 }
 
 @media (max-width: 767px) {
-     label {
-         width: 100%;
-         text-align: left;
-     }
- }
+    label {
+        width: 100%;
+        text-align: left;
+    }
+}
 
 .labelGauche {
     text-align: left;
@@ -61,13 +61,15 @@ section div {
     height: 50px;
 }
 
- @media (max-width: 767px) {
-     .cancel, .validate {
-         font-size: 14px;
-         width: 100px;
-         height: 30px;
-     }
- }
+@media (max-width: 767px) {
+
+    .cancel,
+    .validate {
+        font-size: 14px;
+        width: 100px;
+        height: 30px;
+    }
+}
 
 .btnForm {
     display: flex;
@@ -121,9 +123,15 @@ input:hover {
     background-color: rgb(1, 95, 1);
 }
 
+.smallMdp {
+    display: block;
+    text-align: end;
+
+}
+
 @media (max-width: 767px) {
-     .smallMdp {
-         font-size: 11px;
-         text-align: left;
-     }
- }
+    .smallMdp {
+        font-size: 11px;
+        text-align: left;
+    }
+}

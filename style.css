@@ -12,7 +12,7 @@
 
     h1 {
         font-family: "Iam-Hueca";
-        font-size: 6vw;
+        font-size: 4vw;
         color: white;
         text-align: center;
         margin-top: 0.2vw;
@@ -42,10 +42,10 @@
     }
 
     @media (max-width: 767px) {
-  section {
-    width:400px;
-  }
-}
+        section {
+            width: 400px;
+        }
+    }
 
 
     .lien-nav {
@@ -58,10 +58,10 @@
         gap: 1vw;
     }
 
-     @media (max-width: 767px) {
-    .lien-nav{
-        margin:5px;
-    }
+    @media (max-width: 767px) {
+        .lien-nav {
+            margin: 5px;
+        }
     }
 
     .lien-nav a {
@@ -77,9 +77,9 @@
     }
 
     @media (max-width: 767px) {
-    .lien-nav a {
-        font-size: 12px;
-    }
+        .lien-nav a {
+            font-size: 12px;
+        }
     }
 
     .lien-nav a:hover {
@@ -87,15 +87,14 @@
     }
 
     p {
-        padding: 0.5vw;
-        font-size:18px;
+        font-size: 18px;
         margin: 0.3vw;
     }
 
     @media (max-width: 767px) {
-    p {
-    font-size: 14px;
-    }
+        p {
+            font-size: 14px;
+        }
     }
 
     h2 {
@@ -106,7 +105,7 @@
     }
 
     @media (max-width: 767px) {
-h2 {
-    font-size: 22px;
-  }
-}
+        h2 {
+            font-size: 22px;
+        }
+    }
