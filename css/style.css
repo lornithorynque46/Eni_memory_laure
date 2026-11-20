@@ -1,6 +1,6 @@
     @font-face {
         font-family: 'Iam-Hueca';
-        src: url(fonts/Iam-Hueca.otf) format('opentype');
+        src: url(../fonts/Iam-Hueca.otf) format('opentype');
         font-weight: normal;
         font-style: normal;
     }
@@ -19,7 +19,7 @@
     }
 
     body {
-        background-image: url("ressources/imagesdefond/fond-bleu.jpg");
+        background-image: url("../ressources/imagesdefond/fond-bleu.jpg");
         background-size: cover;
         color: white;
         display: flex;

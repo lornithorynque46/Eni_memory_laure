@@ -28,29 +28,29 @@ const red = $("#rouge");
 const orange = $("#orange");
 const yellow = $("#jaune");
 const green = $("#vert");
-const invalide= $("#invalide");
-const faible=$("#faible");
-const moyen =$("#moyen");
-const fort=$("#fort");
+const invalide = $("#invalide");
+const faible = $("#faible");
+const moyen = $("#moyen");
+const fort = $("#fort");
 const mdpInsc = $("#mdpFormInsc");
 const regexMdp = /^(?=.*\d)(?=.*[a-z])(?=.*[^\w\s]).{6,}$/;
 
 //Fonction de remise à zero des indicateurs
-function resetIndicateurs(){
-   red.css("visibility", "hidden");
-    invalide.text("");
-    orange.css("visibility", "hidden");
-    faible.text("");
-    yellow.css("visibility", "hidden");
-    moyen.text("")
-    green.css("visibility", "hidden");
-    fort.text("")
+function resetIndicateurs() {
+  red.css("visibility", "hidden");
+  invalide.text("");
+  orange.css("visibility", "hidden");
+  faible.text("");
+  yellow.css("visibility", "hidden");
+  moyen.text("");
+  green.css("visibility", "hidden");
+  fort.text("");
 }
 
 mdpInsc.on("input", function () {
   //On repart à zero à chaque saisie
   resetIndicateurs();
-  if(mdpInsc.val().length===0)return;
+  if (mdpInsc.val().length === 0) return;
   //la ligne s'affiche rouge (invalide) si les conditions ne sont pas respectées
   if (mdpInsc.val().length < 6 || !regexMdp.test(mdpInsc.val())) {
     red.css("visibility", "visible");
@@ -61,28 +61,36 @@ mdpInsc.on("input", function () {
     orange.css("visibility", "visible");
     faible.text("faible");
   }
-  //la ligne s'affiche jaune si les conditions sont respectées et le mot de passe contient moins de 10 caractères 
+  //la ligne s'affiche jaune si les conditions sont respectées et le mot de passe contient moins de 10 caractères
   if (mdpInsc.val().length >= 8 && regexMdp.test(mdpInsc.val())) {
     yellow.css("visibility", "visible");
-    moyen.text("moyen")
+    moyen.text("moyen");
   }
-  //la ligne s'affiche jaune si les conditions sont respectées et le mot de passe contient plus de 10 caractères 
+  //la ligne s'affiche jaune si les conditions sont respectées et le mot de passe contient plus de 10 caractères
   if (mdpInsc.val().length >= 10 && regexMdp.test(mdpInsc.val())) {
     green.css("visibility", "visible");
-    fort.text("fort")
+    fort.text("fort");
   }
-
 });
 
-
 //Confirmation du mot de passe
-const mdpVerif=$("#mdpVerif");
-let mdpOK=false;
+const mdpVerif = $("#mdpVerif");
+let mdpOK = false;
 
-mdpVerif.on("input", function(){
-  if(mdpVerif.val()===mdpInsc.val()){
-    mdpOK=true;
-    console.log("mdp ok")
+mdpVerif.on("input", function () {
+  if (mdpVerif.val() === mdpInsc.val()) {
+    mdpOK = true;
+    console.log("mdp ok");
   }
-}
-)
+});
+
+//Mise des données de l'utilisateur dans le local storage
+localStorage.setItem("name", nameInsc.val());
+localStorage.setItem("email", emailInsc.val());
+localStorage.setItem("mdp", mdpInsc.val());
+//Récupération de ces données
+$(".validate").on("click", function () {
+  localStorage.setItem("name", nameInsc.val());
+  localStorage.setItem("email", emailInsc.val());
+  localStorage.setItem("mdp", mdpInsc.val());
+});

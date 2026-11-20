@@ -39,15 +39,24 @@ Ce projet est un exercice de formation. Je l'ai volontairement codé moi-même, 
 
 ````
 eni_memory/
-├── accueil.html
-├── connexion.html
-├── inscription.html
-├── jeu.html
-├── profil.html
+├── html/
+│   ├── accueil.html
+│   ├── connexion.html
+│   ├── inscription.html
+│   ├── jeu.html
+│   └── profil.html
 ├── css/
+│   ├── style.css
+│   ├── accueil.css
+│   ├── connexion.css
+│   ├── inscription.css
+│   └── jeu.css
 ├── js/
-└── ressources/
-├── font/
+│   ├── inscription.js
+│   └── jeu.js
+├── fonts/
+├── ressources/
+└── screenshots/
 
 
 
@@ -59,7 +68,7 @@ eni_memory/
 ````
 
 2. **Ouvrir** le dossier dans [Visual Studio Code](https://code.visualstudio.com/)
-3. Lancer la page d'accueil avec l'extension **Live Server** (clic droit sur `accueil.html` → _Open with Live Server_)
+3. Lancer la page d'accueil avec l'extension **Live Server** (clic droit sur `html/accueil.html` → _Open with Live Server_)
 
 Aucune installation de dépendances n'est nécessaire.
 

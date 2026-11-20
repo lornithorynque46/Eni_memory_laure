@@ -1,21 +1,21 @@
 //Déclaration d'un tableau d'images
 let images = [
-  "ressources/memory-legume/1.svg",
-  "ressources/memory-legume/2.svg",
-  "ressources/memory-legume/3.svg",
-  "ressources/memory-legume/4.svg",
-  "ressources/memory-legume/5.svg",
-  "ressources/memory-legume/6.svg",
+  "../ressources/memory-legume/1.svg",
+  "../ressources/memory-legume/2.svg",
+  "../ressources/memory-legume/3.svg",
+  "../ressources/memory-legume/4.svg",
+  "../ressources/memory-legume/5.svg",
+  "../ressources/memory-legume/6.svg",
 ];
 
 //On double ce tableau pour avoir deux fois les mêmes images
 let imagesDoubles = [
-  "ressources/memory-legume/1.svg",
-  "ressources/memory-legume/2.svg",
-  "ressources/memory-legume/3.svg",
-  "ressources/memory-legume/4.svg",
-  "ressources/memory-legume/5.svg",
-  "ressources/memory-legume/6.svg",
+  "../ressources/memory-legume/1.svg",
+  "../ressources/memory-legume/2.svg",
+  "../ressources/memory-legume/3.svg",
+  "../ressources/memory-legume/4.svg",
+  "../ressources/memory-legume/5.svg",
+  "../ressources/memory-legume/6.svg",
 ];
 
 //On concatène les deux tableaux
@@ -47,7 +47,7 @@ function game() {
   if (occupe) return;
   const numero = cartes.index(this);
   //On ne peut pas cliquer sur une carte qui a déjà été retournée
-  if ($(this).attr("src") != "ressources/question.svg") return;
+  if ($(this).attr("src") != "../ressources/question.svg") return;
   //Lancement de la fonction retourner pour que le point d'interrogation laisse place à un légume
   retourner(this, imagesShuffled[numero]);
   //La première carte retournée ne vaut rien au début puis elle prend la valeur de la carte cliquée
@@ -75,8 +75,8 @@ function game() {
     occupe = true;
     //On laisse un délai d'une seconde avant que les cartes ne se retournent à nouveau
     setTimeout(() => {
-      retourner(carte1, "ressources/question.svg");
-      retourner(carte2, "ressources/question.svg");
+      retourner(carte1, "../ressources/question.svg");
+      retourner(carte2, "../ressources/question.svg");
       //Quand les deux deux cartes sont à nouveau retournées (face point d'interrogation), on désactive le verrou
       occupe = false;
     }, 1000);
@@ -111,7 +111,7 @@ document.addEventListener("keydown", (event) => {
     premiere = null;
     pairesTrouvees = 0;
     cartes.each((index, carte) => {
-      carte.src = "ressources/question.svg";
+      carte.src = "../ressources/question.svg";
       $(carte).removeClass("aplatie");
     });
   }
