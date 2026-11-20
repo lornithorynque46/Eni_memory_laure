@@ -36,9 +36,16 @@
         padding: 0.2vw;
         border-radius: 10px;
         border: solid white 1px;
-        width: 50vw;
+        width: 850px;
         margin-bottom: 2vw;
+        min-height: 500px;
     }
+
+    @media (max-width: 767px) {
+  section {
+    width:400px;
+  }
+}
 
 
     .lien-nav {
@@ -51,6 +58,12 @@
         gap: 1vw;
     }
 
+     @media (max-width: 767px) {
+    .lien-nav{
+        margin:5px;
+    }
+    }
+
     .lien-nav a {
         text-decoration: none;
         color: white;
@@ -60,6 +73,13 @@
         background: linear-gradient(#0F2027, #203A43, #2C5364);
         border-radius: 10px;
         box-shadow: 3px 3px 15px rgb(0, 0, 0);
+        font-size: 18px;
+    }
+
+    @media (max-width: 767px) {
+    .lien-nav a {
+        font-size: 12px;
+    }
     }
 
     .lien-nav a:hover {
@@ -68,11 +88,25 @@
 
     p {
         padding: 0.5vw;
+        font-size:18px;
+        margin: 0.3vw;
+    }
+
+    @media (max-width: 767px) {
+    p {
+    font-size: 14px;
+    }
     }
 
     h2 {
         text-align: center;
         padding-bottom: 0.5vw;
         color: white;
-        font-size: 2.5rem;
+        font-size: 30px;
     }
+
+    @media (max-width: 767px) {
+h2 {
+    font-size: 22px;
+  }
+}

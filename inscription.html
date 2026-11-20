@@ -43,20 +43,28 @@
                         </div>
                         <div>
                             <label for="mdpFormInsc">Votre mot de passe : </label>
-                            <input type="password" name="mdp" id="mdpFormInsc" required title="Renseignez un mot de passe (min. 6 caractères dont au moins 1 minuscule, 1 symbole et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\s]).{6,}"><br/>
-                                <small id="smallMdp">Au moins 6 caractères dont une minuscule, un symbole et un chiffre.</small>
+                            <input type="password" name="mdp" id="mdpFormInsc" required title="Renseignez un mot de passe (min. 6 caractères dont au moins 1 minuscule, 1 symbole et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[^\w\s]).{6,}"><br/>
+                                <small class="smallMdp">Au moins 6 caractères dont une minuscule, un symbole et un chiffre.</small>
                         </div>
                         <div>
                             <label for="mdpVerif">Confirmez le mot de passe : </label>
-                            <input type="password" name="mdpVerif" id="mdpVerif" required title="Confirmez le mot de passe (min. 6 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\s]).{6,}">
+                            <input type="password" name="mdpVerif" id="mdpVerif" required title="Confirmez le mot de passe (min. 6 caractères dont au moins 1 minuscule, 1 symbole et un chiffre)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[^\w\s]).{6,}">
                             <div>
+                                <!--Création d'un tableau pour que les couleurs et les messages soient alignées-->
                                 <table>
                                     <tr>
                                         <td id="rouge"></td>
                                         <td id="orange"></td>
                                         <td id="jaune"></td>
                                         <td id="vert"></td>
-                                    </tr>
+                                    </tr> 
+                                     <tr>
+                                        <td id="invalide"></td>
+                                        <td id="faible"></td>
+                                        <td id="moyen"></td>
+                                        <td id="fort"></td>
+                                    </tr> 
+
                                 </table>
                             </div>
                             <div ></div>
